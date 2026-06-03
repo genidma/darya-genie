@@ -35,7 +35,22 @@ Our expanded **Year 01 Pilot Target is $250,000 CAD**, built explicitly to elimi
 | **Core Hardware & Autonomy** | $50,000 | Rugged tracked UGV chassis, Jetson/Raspberry Pi compute blocks, conveyor mechanics, sealed sensor suites, and local W-11 truck art styling. |
 | **Micro-Incentive Seeding** | $15,000 | Initial liquidity to back local community collection drop-hubs for immediate wallet payouts. |
 
-*Every 5-rupee micro-donation processed by the gateway flows directly into sustaining local incentive liquidity, protecting team welfare, and supporting hardware maintenance.*
+*Every 5-rupee (or 20 rupee) micro-donation processed by the gateway flows directly into sustaining local incentive liquidity, protecting team welfare, and supporting hardware maintenance.*
+
+### 📈 The Micro-Equity Scalability Model (The 20/20 Projection)
+
+To understand the mathematical velocity of decentralized civic tech, consider this hyper-conservative baseline projection for Karachi's urban density:
+
+* **Target Activation:** 20% of Karachi's projected population (~4.62 Million active community participants).
+* **Micro-Equity Quantum:** A single, one-time donation of **20 PKR (~$0.07 CAD)** per person.
+
+$$\text{Total Capital} = 4,620,000 \times 20\text{ PKR} = 92,400,000\text{ PKR}$$
+
+This single, low-friction activation wave yields approximately **$322,300 CAD**. 
+
+#### ⚡ The Operational Reality Shift
+1. **Instant Self-Sovereignty:** This single loop completely clears our **Year 01 Pilot Budget ($250,000 CAD)**, securing premium living wages, holistic worker support, and hardware fabrication with a **$72,300 CAD surplus** to immediately seed Year 02.
+2. **Infinite Compound Runway:** If this same 20% cohort triggers a 20 PKR transaction just once per quarter, the platform generates over **$1.2 Million CAD annually**—fully funding a multi-robot fleet and an permanent local leadership pipeline without a single cent of institutional debt or state intervention.
 
 ## Credits
 
