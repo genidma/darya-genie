@@ -92,6 +92,8 @@ For full curriculum details and certification requirements, see the [`/docs/safe
 
 ---
 
+## 🔒 Security & Asset Protection
+
 For a detailed breakdown of our multi-domain physical, technical, and social security protocols, please review the [Security & Asset Protection Protocol](/docs/SECURITY_AND_ASSET_PROTECTION.md).
 
 ## Credits
