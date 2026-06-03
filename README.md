@@ -4,6 +4,14 @@
 
 Darya Genie is an open-source, decentralized civic-tech initiative designed to bypass institutional gridlock and clean up urban waterways. By combining low-cost autonomous waste-harvesting hardware with a culturally resonant, interactive mascot and a micro-equity donation loop, we shift the environmental narrative from "the state's problem" to a community-owned triumph.
 
+## Concept Visuals
+
+![Darya Genie Concept](img/darya_genie_concept_06-03-2026.png)
+*Darya Genie UGV concept illustration.*
+
+![Swarm Coordination Hope & Healing](img/darya_genie_concept_swarm_co-ord_hope_healing_06-03-2026.png)
+*Illustration of drone swarm coordinating with UGV for hopeful healing of the river.*
+
 ## Repository Structure
 
 This repository is organized as follows:
