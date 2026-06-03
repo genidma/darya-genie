@@ -26,7 +26,8 @@ This repository is organized as follows:
 ├── docs/                  
 │   ├── CURRICULUM.md      # Educational outreach materials
 │   ├── DRONE_PROTOCOLS.md # Drone-to-UGV coordination protocols
-│   └── SECURITY_AND_ASSET_PROTECTION.md # Asset protection and security policy
+│   ├── SECURITY_AND_ASSET_PROTECTION.md # Asset protection and security policy
+│   └── ANTI_GAMING_AND_MATERIAL_INTEGRITY_PROTOCOL.md # Anti-fraud for drop-hub incentive system
 └── tests/                 # Hardware-in-the-loop (HIL) simulation scripts
 ```
 
@@ -46,7 +47,7 @@ Our expanded **Year 01 Pilot Target is $320,000 CAD**, built explicitly to elimi
 | **Upward Mobility & Executive Training** | $40,000 | Structured 2-to-3 year fast-track program. Earmarked funds for leadership workshops, advanced robotics upskilling, and business management training to transition field workers into future Directors. |
 | **Holistic Support, Meals & Office Care** | $35,000 | Daily high-nutrition catered meals for all ground and aerial crew, field health checks, high-grade personal protective equipment (PPE), and air-conditioned office workspaces, with showers and a place to take naps |
 | **Core Ground Autonomy (UGV)** | $25,000 | Rugged tracked UGV chassis fabrication, Jetson/Raspberry Pi compute blocks, conveyor mechanics, sealed sensor suites, and local W-11 truck art styling. |
-| **Micro-Incentive Seeding** | $10,000 | Initial liquidity to back local community collection drop-hubs for immediate wallet payouts. |
+| **Micro-Incentive Seeding** | $10,000 | Initial liquidity to back local community collection drop-hubs for immediate wallet payouts. This complements robot operations by incentivizing fine-detail collection in narrow banks/alleys unreachable by UGV, creating a "Micro-Equity Loop" where citizens become restoration partners. See [Anti-Gaming Protocol](/docs/ANTI_GAMING_AND_MATERIAL_INTEGRITY_PROTOCOL.md) for fraud prevention measures. |
 
 *Every 5-rupee (or 20 rupee) micro-donation processed by the gateway flows directly into sustaining local incentive liquidity, protecting team welfare, and supporting hardware maintenance.*
 
