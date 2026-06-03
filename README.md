@@ -44,7 +44,7 @@ Our expanded **Year 01 Pilot Target is $320,000 CAD**, built explicitly to elimi
 | **Drone Hardware & Logistics** | $45,000 | Procuring a multi-drone aerial reconnaissance fleet, custom climate-controlled storage cases, and a secure mobile logistics truck to transport the UGV and drones safely. |
 | **Aviation Safety & Certifications** | $20,000 | Earmarked for official Civil Aviation Authority (CAA) commercial drone licensing, rigorous field safety training courses, and operational insurance. |
 | **Upward Mobility & Executive Training** | $40,000 | Structured 2-to-3 year fast-track program. Earmarked funds for leadership workshops, advanced robotics upskilling, and business management training to transition field workers into future Directors. |
-| **Holistic Support, Meals & Office Care** | $35,000 | Daily high-nutrition catered meals for all ground and aerial crew, field health checks, high-grade personal protective equipment (PPE), and air-conditioned office workspaces. |
+| **Holistic Support, Meals & Office Care** | $35,000 | Daily high-nutrition catered meals for all ground and aerial crew, field health checks, high-grade personal protective equipment (PPE), and air-conditioned office workspaces, with showers and a place to take naps |
 | **Core Ground Autonomy (UGV)** | $25,000 | Rugged tracked UGV chassis fabrication, Jetson/Raspberry Pi compute blocks, conveyor mechanics, sealed sensor suites, and local W-11 truck art styling. |
 | **Micro-Incentive Seeding** | $10,000 | Initial liquidity to back local community collection drop-hubs for immediate wallet payouts. |
 
