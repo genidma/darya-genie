@@ -31,6 +31,8 @@ This repository is organized as follows:
 │   │   ├── module_03_environment.md   # River toxin awareness and decon
 │   │   ├── assessment_quiz.md       # Final competency assessment
 │   │   └── mangrove_propagation.md   # Restoration Lead certification module
+│   ├── restoration/
+│   │   └── gis_protocols.md         # Satellite-to-site suitability logic
 │   ├── CURRICULUM.md      # Educational outreach materials
 │   ├── DRONE_PROTOCOLS.md # Drone-to-UGV coordination protocols
 │   ├── SECURITY_AND_ASSET_PROTECTION.md # Asset protection and security policy
@@ -90,6 +92,13 @@ README.md → /docs/safety/ → /scripts/certification_gatekeeper.py → /src/ap
 3. **Payment Gateway Enforcement:** `/src/api/auth.py` middleware checks `User.is_certified == True` before processing any micro-incentive payout.
 
 For full curriculum details and certification requirements, see the [`/docs/safety/`](/docs/safety/) directory.
+
+### Restoration Pipeline Integration
+The GIS protocols feed directly into the mangrove propagation workflow:
+```
+Sentinel-2 → GIS Filtering → Drone Verification → Mangrove Planting → Growth Audits
+```
+See [GIS & Satellite Suitability Protocol](/docs/restoration/gis_protocols.md) for technical details on converting satellite intel into planting coordinates.
 
 ---
 
