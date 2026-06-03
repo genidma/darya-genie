@@ -117,7 +117,7 @@ See [GIS & Satellite Suitability Protocol](/docs/restoration/gis_protocols.md) f
 
 For a detailed breakdown of our multi-domain physical, technical, and social security protocols, please review the [Security & Asset Protection Protocol](/docs/SECURITY_AND_ASSET_PROTECTION.md).
 
-## Credits
+## Contributors
 
 - [Gemini by Google](https://gemini.google.com/) as the original brainstorming partner and lead architect
 - [@genidma](https://github.com/genidma) for the origination of the idea
