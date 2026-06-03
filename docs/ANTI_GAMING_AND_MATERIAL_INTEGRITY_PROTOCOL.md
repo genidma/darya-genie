@@ -6,6 +6,39 @@
 
 ---
 
+## Flowchart: Multi-Layer Fraud Prevention System
+
+The diagram below illustrates why this protocol exists and the key steps to prevent the "Cobra Effect" (recycling same waste for multiple payouts):
+
+```mermaid
+flowchart TD
+    A[Waste Arrives at Drop-Hub] --> B{Processing Complete?}
+    B -- No --> C[Reject: Material Must Be Shredded]
+    B -- Yes --> D[Scan with Vision System]
+    D --> E{River-Aged Waste?}
+    E -- No --> F[Reject: Fresh Waste Detected]
+    E -- Yes --> G[Capture QR + Mobile Wallet Data]
+    G --> H{KYC Pattern Analysis}
+    H -- High Risk --> I[Freeze Payment for GM Audit]
+    H -- Normal Risk --> J[Auto-Payout Released]
+    
+    style A fill:#e1f5fe
+    style C fill:#ffcdd2
+    style F fill:#ffcdd2
+    style I fill:#fff3e0
+    style J fill:#c8e6c9
+```
+
+### Purpose of This Protocol
+
+The "Cobra Effect" historically refers to unintended consequences where incentive programs produce opposite results. In our context:
+
+- **Problem:** Citizens could collect river waste, deposit it for payment, then retrieve it and re-deposit
+- **Solution:** Three independent verification layers ensure one-time payment per net-new waste
+- **Outcome:** $10,000 seeding fund drives genuine ecosystem restoration, not gaming
+
+---
+
 ## 1. Non-Returnable Processing Protocol ("Crush")
 
 ### 1.1 Waste Destruction Workflow
