@@ -98,7 +98,12 @@ The GIS protocols feed directly into the mangrove propagation workflow:
 ```
 Sentinel-2 → GIS Filtering → Drone Verification → Mangrove Planting → Growth Audits
 ```
+
+
 See [GIS & Satellite Suitability Protocol](/docs/restoration/gis_protocols.md) for technical details on converting satellite intel into planting coordinates.
+
+![Mangrove Restoration](img/darya_genie_concept_mangrove_reforesting_06-03-2026.png)
+*Drone-verified mangrove saplings being planted in GIS-validated zones.*
 
 ---
 
