@@ -22,12 +22,20 @@ This repository is organized as follows:
 │   └── motor_controller/  # PlatformIO project for ESP32 with micro-ROS
 ├── src/
 │   ├── genie_brain/       # ROS 2 package for navigation and vision
-│   └── payment_gateway/   # FastAPI server for mobile wallet webhooks
+│   ├── payment_gateway/   # FastAPI server for mobile wallet webhooks
+│   └── api/               # Authentication and certification middleware
 ├── docs/                  
+│   ├── safety/            # Darya Safety-First Certification Course (45-min curriculum)
+│   │   ├── module_01_safety.md      # Hazard identification and PPE
+│   │   ├── module_02_equipment.md   # Equipment handling and protocols
+│   │   ├── module_03_environment.md   # River toxin awareness and decon
+│   │   └── assessment_quiz.md       # Final competency assessment
 │   ├── CURRICULUM.md      # Educational outreach materials
 │   ├── DRONE_PROTOCOLS.md # Drone-to-UGV coordination protocols
 │   ├── SECURITY_AND_ASSET_PROTECTION.md # Asset protection and security policy
 │   └── ANTI_GAMING_AND_MATERIAL_INTEGRITY_PROTOCOL.md # Anti-fraud for drop-hub incentive system
+├── scripts/
+│   └── certification_gatekeeper.py  # Validates quiz and updates User_Registry
 └── tests/                 # Hardware-in-the-loop (HIL) simulation scripts
 ```
 
@@ -66,7 +74,23 @@ This single, low-friction activation wave yields approximately **$322,300 CAD**.
 1. **Instant Self-Sovereignty:** This single loop completely clears our expanded **Year 01 Pilot Budget ($320,000 CAD)**, securing premium living wages, drone safety certifications, mobile logistics, and hardware fabrication with an immediate cash reserve to seed Year 02.
 2. **Infinite Compound Runway:** If this same 20% cohort triggers a 20 PKR transaction just once per quarter, the platform generates over **$1.2 Million CAD annually**—fully funding a multi-robot fleet, localized aerial monitoring, and a permanent local leadership pipeline without a single cent of institutional debt or state intervention.
 
-## 🔒 Security & Asset Protection
+## Safety & Certification Pipeline
+
+Darya Genie operates on the fundamental principle that **safety certification is a prerequisite for participation**. All community collectors, drone operators, and field personnel must complete the **Darya Safety-First Certification Course** before engaging in river cleanup activities. This 45-minute curriculum is version-controlled and auditable.
+
+```
+README.md → /docs/safety/ → /scripts/certification_gatekeeper.py → /src/api/auth.py → User.is_certified = True
+```
+
+### Path to Certified Collector
+
+1. **Curriculum Access:** Participants complete the 3-module safety course (`/docs/safety/module_01-03_*.md`) covering hazards, equipment handling, and toxin awareness.
+2. **Assessment Validation:** `certification_gatekeeper.py` validates the final quiz and updates the User_Registry via `POST /api/certify` upon passing.
+3. **Payment Gateway Enforcement:** `/src/api/auth.py` middleware checks `User.is_certified == True` before processing any micro-incentive payout.
+
+For full curriculum details and certification requirements, see the [`/docs/safety/`](/docs/safety/) directory.
+
+---
 
 For a detailed breakdown of our multi-domain physical, technical, and social security protocols, please review the [Security & Asset Protection Protocol](/docs/SECURITY_AND_ASSET_PROTECTION.md).
 
