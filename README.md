@@ -98,8 +98,8 @@ For a detailed breakdown of our multi-domain physical, technical, and social sec
 
 ## Credits
 
+- [Gemini by Google](https://gemini.google.com/) as the original brainstorming partner and lead architect
+- [@genidma](https://github.com/genidma) for the origination of the idea
 - [Kilo - Nvidia Nemotron 3 Super(free)](https://github.com/Kilo-Org/kilocode) for helping update the README and helping develop the very first iteration of the codebase
 - [Kilo - Laguna M1](https://github.com/Kilo-Org/kilocode) for advanced systems architecture and safety protocol development
-- [Gemini by Google](https://gemini.google.com/) as the original brainstorming partner.
-- [@genidma](https://github.com/genidma) for the origination of the idea.
 - [Qoder](https://qoder.com/) (formerly Lingma) for helping link the image to the README.
