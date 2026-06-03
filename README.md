@@ -39,7 +39,7 @@ Our expanded **Year 01 Pilot Target is $250,000 CAD**, built explicitly to elimi
 
 ## Credits
 
-- [Kilo](https://github.com/Kilo-Org/kilocode) for helping update the README.
+- [Kilo - Nvidia Nemotron 3 Super(free)](https://github.com/Kilo-Org/kilocode) for helping update the README and helping develop the very first iteration of the codebase
 - [Gemini by Google](https://gemini.google.com/) as the original brainstorming partner.
 - [@genidma](https://github.com/genidma) for the origination of the idea.
 - [Qoder](https://qoder.com/) (formerly Lingma) for helping link the image to the README.
