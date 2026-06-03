@@ -29,7 +29,8 @@ This repository is organized as follows:
 │   │   ├── module_01_safety.md      # Hazard identification and PPE
 │   │   ├── module_02_equipment.md   # Equipment handling and protocols
 │   │   ├── module_03_environment.md   # River toxin awareness and decon
-│   │   └── assessment_quiz.md       # Final competency assessment
+│   │   ├── assessment_quiz.md       # Final competency assessment
+│   │   └── mangrove_propagation.md   # Restoration Lead certification module
 │   ├── CURRICULUM.md      # Educational outreach materials
 │   ├── DRONE_PROTOCOLS.md # Drone-to-UGV coordination protocols
 │   ├── SECURITY_AND_ASSET_PROTECTION.md # Asset protection and security policy
