@@ -14,8 +14,8 @@
   - Drone Fleet: Each drone stored in custom-cut foam inserts within IP67-rated hard cases. Batteries removed and stored separately in fire-retardant LiPo bags.
   - Base Station: Tripod-mounted radios and laptops secured in shock-mounted racks. Cables coiled and Velcro-strapped to prevent snagging.
 - **Transit:**
-  - Maximum speed: 60 km/h on highways, 40 km/h on urban roads.
-  - Driver must perform a 360° visual check of the truck's surroundings before moving.
+   - Maximum speeds: 10 to 15 mph (4.5 to 6.7 m/s). We won't be flying these in highways.
+   - Driver must perform a 360° visual check of the truck's surroundings before moving.
   - General Manager (GM) or designated Part-Time Driver (PTD) maintains a transit log (paper and digital) noting departure/arrival times, route taken, and any incidents.
 - **Unloading:**
   - Conducted on level ground with wheel chocks placed on the UGV.
