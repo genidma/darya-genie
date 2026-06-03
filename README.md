@@ -94,7 +94,7 @@ README.md → /docs/safety/ → /scripts/certification_gatekeeper.py → /src/ap
 For full curriculum details and certification requirements, see the [`/docs/safety/`](/docs/safety/) directory.
 
 ### Restoration Pipeline Integration
-The GIS protocols feed directly into the mangrove propagation workflow:
+The GIS protocols feed directly into the mangrove propagation workflow. Data is available via ESA (European Space Agency's) [Sentinel-2 Mission](https://browser.dataspace.copernicus.eu/?zoom=16&lat=24.879&lng=67.01395&themeId=DEFAULT-THEME&visualizationUrl=U2FsdGVkX1%2FEtIi0s5wgJf9hrUj6eo955RFHfzkjRinuZQfXnaEd77%2F097XT4GX2lCW3DsLLtBi05SG5P%2FZwlSRsTEKkKN48iTv5JvAf0bqrvGCpz0ysBMZmm9fUuXXK&datasetId=S2_L2A_CDAS). And private data is available via other satellite providers (not factored into the budget as of yet)
 ```
 Sentinel-2 → GIS Filtering → Drone Verification → Mangrove Planting → Growth Audits
 ```
