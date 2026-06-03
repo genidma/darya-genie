@@ -17,21 +17,24 @@ Darya Genie is an open-source, decentralized civic-tech initiative designed to b
 This repository is organized as follows:
 
 ```
-├── hardware/               # UGV chassis CAD files, wiring schematics, and BOM
-├── firmware/               # Microcontroller code for motor drivers and LED matrix faces
-│   └── motor_controller/   # PlatformIO project for ESP32 with micro-ROS
+├── hardware/              # UGV chassis CAD files, wiring schematics, and BOM
+├── firmware/              # Microcontroller code for motor drivers and LED matrix
+│   └── motor_controller/  # PlatformIO project for ESP32 with micro-ROS
 ├── src/
-│   ├── genie_brain/        # ROS 2 package for the robot's brain (navigation, vision, etc.)
-│   └── payment_gateway/    # FastAPI server for processing mobile wallet webhooks
-├── docs/                   # Educational curriculum and community deployment handbooks
-└── tests/                  # Hardware-in-the-loop (HIL) simulation scripts
+│   ├── genie_brain/       # ROS 2 package for navigation and vision
+│   └── payment_gateway/   # FastAPI server for mobile wallet webhooks
+├── docs/                  
+│   ├── CURRICULUM.md      # Educational outreach materials
+│   ├── DRONE_PROTOCOLS.md # Drone-to-UGV coordination protocols
+│   └── SECURITY_AND_ASSET_PROTECTION.md # Asset protection and security policy
+└── tests/                 # Hardware-in-the-loop (HIL) simulation scripts
 ```
 
 ## 💰 Financial Transparency & Worker Welfare (Year 01 Only)
 
 Traditional top-down river restoration initiatives for the Lyari Basin carry massive, gridlocked budgets (such as the S-III plan's **~$150M CAD / PKR 43B** allocation), which frequently suffer from bureaucratic friction and low deployment execution. 
 
-Darya Genie completely flips this paradigm. We treat **Worker Welfare as our Alcoa Keystone Habit**—inspired by Charles Duhigg’s *The Power of Habit*. We believe that by fiercely protecting, properly feeding, and aggressively investing in our frontline team, we automatically secure operational safety, technical discipline, and unshakeable community trust. 
+Darya Genie completely flips this paradigm. We treat **Worker Welfare as our Alcoa Keystone Habit**—inspired by Charles Duhigg's *The Power of Habit*. We believe that by fiercely protecting, properly feeding, and aggressively investing in our frontline team, we automatically secure operational safety, technical discipline, and unshakeable community trust. 
 
 Our expanded **Year 01 Pilot Target is $320,000 CAD**, built explicitly to eliminate hand-to-mouth precarity, establish multi-domain aerial scouting operations, and design a high-mobility leadership pipeline:
 
@@ -61,6 +64,10 @@ This single, low-friction activation wave yields approximately **$322,300 CAD**.
 #### ⚡ The Operational Reality Shift
 1. **Instant Self-Sovereignty:** This single loop completely clears our expanded **Year 01 Pilot Budget ($320,000 CAD)**, securing premium living wages, drone safety certifications, mobile logistics, and hardware fabrication with an immediate cash reserve to seed Year 02.
 2. **Infinite Compound Runway:** If this same 20% cohort triggers a 20 PKR transaction just once per quarter, the platform generates over **$1.2 Million CAD annually**—fully funding a multi-robot fleet, localized aerial monitoring, and a permanent local leadership pipeline without a single cent of institutional debt or state intervention.
+
+## 🔒 Security & Asset Protection
+
+For a detailed breakdown of our multi-domain physical, technical, and social security protocols, please review the [Security & Asset Protection Protocol](/docs/SECURITY_AND_ASSET_PROTECTION.md).
 
 ## Credits
 
