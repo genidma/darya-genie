@@ -11,7 +11,10 @@ Darya Genie is an open-source, decentralized civic-tech initiative designed to b
 Darya Genie operates via three integrated layers:
 
 1. **The Mascot UGV (Darya Genie):** A rugged, expressive, tracked Unmanned Ground Vehicle that manages shallow-bank skimming, interacts with local neighborhoods, and serves as an educational ambassador.
-2. **The Micro-Equity Network:** An API-driven loop integrating local mobile wallets (EasyPaisa/JazzCash). A 5-rupee micro-donation activates the Genie’s physical interactive "dance" and immediate trash collection sequence.
+
+![Darya Genie Concept](img/darya_genie_concept_06-03-2026.png)
+
+2. **The Micro-Equity Network:** An API-driven loop integrating local mobile wallets (EasyPaisa/JazzCash). A 5-rupee micro-donation activates the Genie's physical interactive "dance" and immediate trash collection sequence.
 3. **Upstream Interceptors:** Low-cost physical trash booms and autonomous surface vessels (ASVs) managing deep-water conveyor harvesting where toxicity levels are too hostile for human workers.
 
 ---
