@@ -25,15 +25,17 @@ Traditional top-down river restoration initiatives for the Lyari Basin carry mas
 
 Darya Genie completely flips this paradigm. We treat **Worker Welfare as our Alcoa Keystone Habit**—inspired by Charles Duhigg’s *The Power of Habit*. We believe that by fiercely protecting, properly feeding, and aggressively investing in our frontline team, we automatically secure operational safety, technical discipline, and unshakeable community trust. 
 
-Our expanded **Year 01 Pilot Target is $250,000 CAD**, built explicitly to eliminate hand-to-mouth precarity and design a high-mobility leadership pipeline:
+Our expanded **Year 01 Pilot Target is $320,000 CAD**, built explicitly to eliminate hand-to-mouth precarity, establish multi-domain aerial scouting operations, and design a high-mobility leadership pipeline:
 
 | Phase / Budget Category | Year 01 Allocation (CAD) | Cornerstone Utility & Worker Welfare Impact |
 | :--- | :--- | :--- |
-| **Premium Living Wages** | $110,000 | Defeats hand-to-mouth financial precarity. Provides highly competitive, dignified salaries for field operators and technicians, anchoring long-term retention. |
-| **Upward Mobility & Executive Training** | $40,000 | Structured 2-to-3 year fast-track program. Earmarked funds for leadership workshops, technical robotics upskilling, and management training to transition field workers into Directors. |
-| **Holistic Support, Meals & Office Care** | $35,000 | Daily high-nutrition catered meals, comprehensive field health checks, high-grade personal protective equipment (PPE), and modern, air-conditioned office workspaces. |
-| **Core Hardware & Autonomy** | $50,000 | Rugged tracked UGV chassis, Jetson/Raspberry Pi compute blocks, conveyor mechanics, sealed sensor suites, and local W-11 truck art styling. |
-| **Micro-Incentive Seeding** | $15,000 | Initial liquidity to back local community collection drop-hubs for immediate wallet payouts. |
+| **Core Salaries & Management** | $145,000 | Guarantees living wages for ground technicians, drone operators, a part-time deployment driver, a Technical Trainer, and a full-time project General Manager. |
+| **Drone Hardware & Logistics** | $45,000 | Procuring a multi-drone aerial reconnaissance fleet, custom climate-controlled storage cases, and a secure mobile logistics truck to transport the UGV and drones safely. |
+| **Aviation Safety & Certifications** | $20,000 | Earmarked for official Civil Aviation Authority (CAA) commercial drone licensing, rigorous field safety training courses, and operational insurance. |
+| **Upward Mobility & Executive Training** | $40,000 | Structured 2-to-3 year fast-track program. Earmarked funds for leadership workshops, advanced robotics upskilling, and business management training to transition field workers into future Directors. |
+| **Holistic Support, Meals & Office Care** | $35,000 | Daily high-nutrition catered meals for all ground and aerial crew, field health checks, high-grade personal protective equipment (PPE), and air-conditioned office workspaces. |
+| **Core Ground Autonomy (UGV)** | $25,000 | Rugged tracked UGV chassis fabrication, Jetson/Raspberry Pi compute blocks, conveyor mechanics, sealed sensor suites, and local W-11 truck art styling. |
+| **Micro-Incentive Seeding** | $10,000 | Initial liquidity to back local community collection drop-hubs for immediate wallet payouts. |
 
 *Every 5-rupee (or 20 rupee) micro-donation processed by the gateway flows directly into sustaining local incentive liquidity, protecting team welfare, and supporting hardware maintenance.*
 
@@ -49,8 +51,8 @@ $$\text{Total Capital} = 4,620,000 \times 20\text{ PKR} = 92,400,000\text{ PKR}$
 This single, low-friction activation wave yields approximately **$322,300 CAD**. 
 
 #### ⚡ The Operational Reality Shift
-1. **Instant Self-Sovereignty:** This single loop completely clears our **Year 01 Pilot Budget ($250,000 CAD)**, securing premium living wages, holistic worker support, and hardware fabrication with a **$72,300 CAD surplus** to immediately seed Year 02.
-2. **Infinite Compound Runway:** If this same 20% cohort triggers a 20 PKR transaction just once per quarter, the platform generates over **$1.2 Million CAD annually**—fully funding a multi-robot fleet and an permanent local leadership pipeline without a single cent of institutional debt or state intervention.
+1. **Instant Self-Sovereignty:** This single loop completely clears our expanded **Year 01 Pilot Budget ($320,000 CAD)**, securing premium living wages, drone safety certifications, mobile logistics, and hardware fabrication with an immediate cash reserve to seed Year 02.
+2. **Infinite Compound Runway:** If this same 20% cohort triggers a 20 PKR transaction just once per quarter, the platform generates over **$1.2 Million CAD annually**—fully funding a multi-robot fleet, localized aerial monitoring, and a permanent local leadership pipeline without a single cent of institutional debt or state intervention.
 
 ## Credits
 
