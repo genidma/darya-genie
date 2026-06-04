@@ -124,3 +124,7 @@ For a detailed breakdown of our multi-domain physical, technical, and social sec
 - [Kilo - Nvidia Nemotron 3 Super(free)](https://github.com/Kilo-Org/kilocode) for helping update the README and helping develop the very first iteration of the codebase
 - [Kilo - Laguna M1](https://github.com/Kilo-Org/kilocode) for advanced systems architecture and safety protocol development
 - [Qoder](https://qoder.com/) (formerly Lingma) for helping link the image to the README.
+
+## 🛰️ Research & Intel Gathering
+
+- [ ] Investigate satellite imagery for detecting pollution sources — [Google AI Mode link](https://share.google/aimode/UbOT272aCmDSQSeHh)
