@@ -129,7 +129,7 @@ We maintain high code integrity by performing regular security audits. To audit 
 
 ## 🔄 Development Workflow
 
-We follow a structured branching strategy to ensure all contributions pass through rigorous testing and security verification before hitting production:
+We follow a structured [branching strategy](GEMINI.md#branching-strategy) to ensure all contributions pass through rigorous testing and security verification before hitting production:
 
 1. **Gemini Features:** `feature/gemini-updates` (Initial feature development)
 2. **Integration/Testing:** `main-dev` (Consolidated features, security audits, and automated testing)
