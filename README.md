@@ -6,7 +6,7 @@ Darya Genie is an open-source, decentralized civic-tech initiative designed to b
 
 ### Founder's Vision
 
-Darya (meaning river in Hindi or Urdu) Genie was born from almost two decades of lived experience near polluted rivers—specifically 5 years living 1 km away—a personal journey sparked by watching modern travel vlogs revisit these same waterways. The vision is a humble one: What if you could fork a repository here on GitHub and immediately access the material needed to help clean up a local river or stream safely, sustainably, and without creating further environmental or safety issues?
+Darya (meaning river in Hindi or Urdu) Genie was born from almost two decades of lived experience near polluted rivers—specifically 5 years living 1 km away, where the daily dust and pollution wreaked havoc on my asthma—a personal journey sparked by watching modern travel vlogs revisit these same waterways. The vision is a humble one: What if you could fork a repository here on GitHub and immediately access the material needed to help clean up a local river or stream safely, sustainably, and without creating further environmental or safety issues?
 
 ## Concept Visuals
 
