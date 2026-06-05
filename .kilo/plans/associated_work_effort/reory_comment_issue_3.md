@@ -53,7 +53,7 @@ A proposed granular roadmap for satellite-based waste detection:
      pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
      ```
      > [!NOTE]
-     > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`).
+     > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`). https://fbaipublicfiles.com/
 
    * **Data Formatting:**
      * **YOLO:** `.txt` files in `data/labels/` containing `class_id x_center y_center width height`.
