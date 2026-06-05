@@ -11,4 +11,10 @@ The Vertex AI extension is used for prompt management and optimization. Ensure t
 - Vertex AI API (aiplatform.googleapis.com)
 
 ## Branching Strategy
-- Features are developed in isolated branches, integrated into `main-dev` for consolidated testing and security validation, and promoted to `main` only for stable releases.
+Features are developed in isolated branches, integrated into `main-dev` for consolidated testing and security validation, and promoted to `main` only for stable releases.
+
+```mermaid
+graph LR
+    feature -->|Merge| main-dev
+    main-dev -->|Merge| main
+```
