@@ -152,7 +152,3 @@ All PRs must be merged into `main-dev` first for testing. Only after passing all
 - [Kilo - Nvidia Nemotron 3 Super(free)](https://github.com/Kilo-Org/kilocode) for helping update the README and helping develop the very first iteration of the codebase
 - [Kilo - Laguna M1](https://github.com/Kilo-Org/kilocode) for advanced systems architecture and safety protocol development
 - [Qoder](https://qoder.com/) (formerly Lingma) for helping link the image to the README.
-
-## 🛰️ Riverine Ecosystem Monitoring
-
-- [ ] Investigate satellite imagery for monitoring riverine health and restoration suitability — [Google AI Mode link](https://share.google/aimode/UbOT272aCmDSQSeHh)

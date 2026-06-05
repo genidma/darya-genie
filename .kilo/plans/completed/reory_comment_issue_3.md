@@ -70,7 +70,10 @@ Here are the details specific to this PR and associated PRs that may come out of
         > [!NOTE]
         > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`). https://www.whois.com/whois/fbaipublicfiles.com
 
-- [ ] **2.d. First Step:** Identify the best subset of the AerialWaste dataset for riverine contexts and propose a data ingestion pipeline using `rasterio`.
+- [ ] **2.e. Riverine Ecosystem Monitoring:** Investigate satellite imagery for monitoring riverine health and restoration suitability — [Google AI Mode link](https://share.google/aimode/UbOT272aCmDSQSeHh)
+    > [!IMPORTANT]
+    > **Final Step:** Once this task and all other child sub-items of issue #3 are completed, please weave the final summary of this investigation back into the project `README.md` to keep the high-level roadmap up-to-date.
+
 
 ---
 If any aspect of this instruction set is vague/does not make sense and/or needs amendments, then definitely feel free to share your thoughts here!
