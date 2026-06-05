@@ -117,7 +117,38 @@ See [GIS & Satellite Suitability Protocol](/docs/restoration/gis_protocols.md) f
 
 For a detailed breakdown of our multi-domain physical, technical, and social security protocols, please review the [Security & Asset Protection Protocol](/docs/SECURITY_AND_ASSET_PROTECTION.md).
 
-## Credits
+## 🛠️ Security Audit Workflow
+
+We maintain high code integrity by performing regular security audits. To audit new API contributions:
+
+```bash
+# 1. Run dependency audit to identify vulnerabilities
+~/.local/bin/pip-audit -r src/api/requirements.txt
+
+# 2. Run static analysis (SAST) to detect common Python security flaws
+~/.local/bin/bandit -r src/api/
+```
+
+## 🔄 Development Workflow
+
+We follow a structured branching strategy to ensure all contributions pass through rigorous testing and security verification before hitting production:
+
+1. **Gemini Features:** `feature/gemini-updates` (Initial feature development)
+2. **Integration/Testing:** `main-dev` (Consolidated features, security audits, and automated testing)
+3. **Production:** `main` (Stable release candidate)
+
+All PRs must be merged into `main-dev` first for testing. Only after passing all audits and tests can changes be promoted to `main`.
+
+## 🤝 Credits and Notable Contributions
+
+### Notable Contributions
+
+| Handle | PR Link | Synopsis |
+| :--- | :--- | :--- |
+| @HMS091 | [PR #5](https://github.com/genidma/darya-genie/pull/5) | Implementation of FastAPI service for restoration and waste submission. |
+| @YuuGR1337 | [PR #7](https://github.com/genidma/darya-genie/pull/7) | Exploration of satellite imagery for pollution detection. |
+
+### Credits
 
 - [Gemini by Google](https://gemini.google.com/) as the original brainstorming partner and lead architect
 - [@genidma](https://github.com/genidma) for the origination of the idea
