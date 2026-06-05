@@ -18,7 +18,10 @@ Here are the details specific to this PR and associated PRs that may come out of
      * **Merge/Rebase:** Integrate `main-dev` into the feature branch (`git merge origin/main-dev` or `git rebase origin/main-dev`).
      * **Resolve:** Fix any merge conflicts, if they occur.
      * **Push:** Update the remote PR branch (`git push origin <branch-name>`).
-2. **Security:** It would be great if you can install and run the following? All code must pass a local security audit (`pip-audit` for dependencies, and `bandit` for SAST) as documented in our README.
+2. **Security:** It would be great if you can install and run the following security audits. All code must pass these checks as documented in our README:
+   * To install the tools, run: `pip install pip-audit bandit`
+   * To audit dependencies, run: `pip-audit -r src/api/requirements.txt`
+   * To perform static analysis (SAST), run: `bandit -r src/api/`
 
 ### 🛰️ Technical Roadmap (Issue #3)
 A proposed granular roadmap for satellite-based waste detection:
