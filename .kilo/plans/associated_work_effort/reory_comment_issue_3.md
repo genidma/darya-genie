@@ -14,12 +14,15 @@ Here are the details specific to this PR and associated PRs that may come out of
 1.a. [ ] **Environment Setup:** Before installing dependencies, please create a virtual environment to isolate your workspace:
    * `python -m venv venv`
    * `source venv/bin/activate` (or `venv\Scripts\activate` on Windows)
+   > [!IMPORTANT]
+   > **Disk Space Management:** The dependencies for this project are significant. Always use `--no-cache-dir` with `pip install` commands to prevent "No space left on device" errors.
+
 1.b. [ ] **Development:** Please create PRs from your feature branches. Our team will handle merging them into the appropriate development (`main-dev`) or production (`main`) pipelines.
    * To keep your branch up-to-date with our latest changes, please periodically pull from `main-dev`:
      * Fetch: `git fetch origin`
      * Merge: `git merge origin/main-dev`
 1.c. [ ] **Security:** Pass local security audits:
-   * Install: `pip install pip-audit bandit`
+   * Install: `pip install --no-cache-dir pip-audit bandit`
    * Dependency Audit: `pip-audit -r src/api/requirements.txt`
    * SAST Audit: `bandit -r src/api/`
 
@@ -54,9 +57,9 @@ Here are the details specific to this PR and associated PRs that may come out of
    2.c.v. [ ] Environment Setup:
       ```bash
       # For YOLOv8
-      pip install ultralytics
+      pip install --no-cache-dir ultralytics
       # For Mask R-CNN
-      pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
+      pip install --no-cache-dir detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
       ```
       > [!NOTE]
       > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`). https://www.whois.com/whois/fbaipublicfiles.com
