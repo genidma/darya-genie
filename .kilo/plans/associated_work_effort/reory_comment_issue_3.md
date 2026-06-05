@@ -10,88 +10,55 @@ I think a first good point to get started with is, via the [README.md](https://g
 
 Here are the details specific to this PR and associated PRs that may come out of issue #3 here:
 
-### 🔄 Contributor Workflow
-1. **Development:** Feel free to target all new feature PRs to the `main-dev` branch as a redirection. 
-   * To synchronize a feature branch (PR) with `main-dev`, please follow these steps:
-     * **Fetch:** Update local repository with latest remote changes (`git fetch origin`).
-     * **Checkout:** Switch to the feature branch (`git checkout <branch-name>`).
-     * **Merge/Rebase:** Integrate `main-dev` into the feature branch (`git merge origin/main-dev` or `git rebase origin/main-dev`).
-     * **Resolve:** Fix any merge conflicts, if they occur.
-     * **Push:** Update the remote PR branch (`git push origin <branch-name>`).
-2. **Security:** It would be great if you can install and run the following security audits. All code must pass these checks as documented in our README:
-   * To install the tools, run: `pip install pip-audit bandit`
-   * To audit dependencies, run: `pip-audit -r src/api/requirements.txt`
-   * To perform static analysis (SAST), run: `bandit -r src/api/`
+### 1. Contributor Workflow
+1.a. [ ] **Development:** Target all new feature PRs to the `main-dev` branch as a redirection.
+   * To synchronize a feature branch (PR) with `main-dev`:
+     * Fetch: `git fetch origin`
+     * Checkout: `git checkout <branch-name>`
+     * Merge/Rebase: `git merge origin/main-dev` or `git rebase origin/main-dev`
+     * Resolve: Fix any merge conflicts.
+     * Push: `git push origin <branch-name>`
+1.b. [ ] **Security:** Pass local security audits:
+   * Install: `pip install pip-audit bandit`
+   * Dependency Audit: `pip-audit -r src/api/requirements.txt`
+   * SAST Audit: `bandit -r src/api/`
 
-### 🛰️ Technical Roadmap (Issue #3)
-A proposed granular roadmap for satellite-based waste detection:
+### 2. Technical Roadmap (Issue #3)
 
-#### 1. Detection Methodologies & Implementation
-* **Direct Object Detection:** Identify unauthorized landfills/blockages. 
-    * *Architecture:* Utilize YOLOv8 or Mask R-CNN.
-    * *Script:* A tiling script is available at `src/genie_brain/detection/tile_satellite_image.py` to prepare high-resolution images for detection.
-    * *Action:* I have been told that a good repo to begin with is via the fine-tuning via [AerialWaste dataset](https://github.com/nahitorres/AerialWaste).
-* **Spectral Analysis:** Discriminate waste via NDWI and multi-band ratios using Sentinel-2 data.
+2.a. [ ] **Detection Methodologies & Implementation**
+   2.a.i. [ ] Direct Object Detection (YOLOv8 or Mask R-CNN)
+      * Use tiling script: `src/genie_brain/detection/tile_satellite_image.py`
+      * Dataset: [AerialWaste dataset](https://github.com/nahitorres/AerialWaste)
+   2.a.ii. [ ] Spectral Analysis (NDWI/multi-band ratios using Sentinel-2)
 
-#### 2. Recommended Data & Tooling
-* **Frameworks:** `PyTorch` is required for model definition and training. Ensure you have a version compatible with your CUDA environment (e.g., `pip install torch torchvision`).
-* **Geospatial Pipeline:** Utilize `GDAL` or `Rasterio` for handling satellite imagery. `Rasterio` is highly recommended for its clean Pythonic interface when loading, reprojecting, and saving GeoTIFF files.
-* **Orchestration:** `dask-geopandas` is essential for handling large-scale datasets. It allows you to parallelize the processing of massive geospatial files, effectively distributing workload across CPU cores and avoiding memory bottlenecks during tiling.
+2.b. [ ] **Recommended Data & Tooling**
+   2.b.i. [ ] Frameworks: `PyTorch` (compatible with CUDA environment: `pip install torch torchvision`)
+   2.b.ii. [ ] Geospatial Pipeline: `GDAL` or `Rasterio`
+   2.b.iii. [ ] Orchestration: `dask-geopandas` for parallel processing
 
+2.c. [ ] **Model Implementation Workflow**
+   2.c.i. [ ] Architecture Selection (YOLOv8 vs Mask R-CNN)
+   2.c.ii. [ ] Data Preparation (Structure: `/data/images/train/`, `/data/labels/train/`, etc.)
+   2.c.iii. [ ] Data Configuration: Create `riverine_waste.yaml` (format: `class_id x_center y_center width height`)
+   2.c.iv. [ ] Training Script: Use YOLOv8 example
+      ```python
+      from ultralytics import YOLO
+      model = YOLO('yolov8n.pt') 
+      model.train(data='riverine_waste.yaml', epochs=50, imgsz=640)
+      ```
+      > [!IMPORTANT]
+      > **GPU Highly Recommended:** Training on a CPU is impractical. If you lack a local NVIDIA GPU, use these free-tier cloud environments:
+      > * **Google Colab:** Set `Runtime` -> `Change runtime type` to `T4 GPU`.
+      > * **Kaggle Kernels:** Enable `GPU T4 x2` in the accelerator settings.
 
-#### 4. Model Implementation Workflow
-1. **Architecture Selection:**
-   * **YOLOv8 (`ultralytics`):** Best for real-time inference and rapid iteration.
-   * **Mask R-CNN (`detectron2`):** Best if pixel-perfect instance segmentation is required.
+   2.c.v. [ ] Environment Setup:
+      ```bash
+      # For YOLOv8
+      pip install ultralytics
+      # For Mask R-CNN
+      pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
+      ```
+      > [!NOTE]
+      > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`). https://www.whois.com/whois/fbaipublicfiles.com
 
-2. **Data Preparation (Required Directory Structure):**
-   Before training, your data *must* follow this structure:
-   ```
-   /data/
-     /images/train/ (raw .jpg or .png images)
-     /images/val/
-     /labels/train/ (YOLO .txt files)
-     /labels/val/
-   ```
-
-3. **Data Configuration (YOLO):**
-   Create a `riverine_waste.yaml` file in your root project directory:
-   ```yaml
-   # Path to your dataset root
-   path: /path/to/data/
-   train: images/train
-   val: images/val
-   
-   # Class names
-   names:
-     0: riverine_waste
-   ```
-   * **Label Formatting:** Each `.txt` file in `labels/` must contain lines matching the format: `class_id x_center y_center width height`.
-     * *Example:* `0 0.5 0.5 0.2 0.2` (Class 0 at the center with 20% width/height).
-
-4. **Training Script (YOLOv8 Example):**
-   Ensure `riverine_waste.yaml` is in the same directory as this script.
-   ```python
-   from ultralytics import YOLO
-
-   # 1. Load a pre-trained YOLOv8 model (n=nano, s=small, m=medium, l=large)
-   model = YOLO('yolov8n.pt') 
-
-   # 2. Train using your configuration file
-   model.train(data='riverine_waste.yaml', epochs=50, imgsz=640)
-   ```
-   > [!IMPORTANT]
-   > **GPU Highly Recommended:** Training on a CPU is impractical for these models. A GPU is required. If you do not have local access to an NVIDIA GPU, use these free-tier cloud environments:
-   > * **Google Colab:** Set `Runtime` -> `Change runtime type` to `T4 GPU`.
-   > * **Kaggle Kernels:** Enable `GPU T4 x2` in the accelerator settings on the right sidebar.
-   > * **Setup:** You will need to install the dependencies (`pip install ultralytics`) each time you start a new session.
-
-5. **Environment Setup:**
-   ```bash
-   # For YOLOv8
-   pip install ultralytics
-   # For Mask R-CNN
-   pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
-   ```
-   > [!NOTE]
-   > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`). https://www.whois.com/whois/fbaipublicfiles.com
+2.d. [ ] **First Step:** Identify the best subset of the AerialWaste dataset for riverine contexts and propose a data ingestion pipeline using `rasterio`.
