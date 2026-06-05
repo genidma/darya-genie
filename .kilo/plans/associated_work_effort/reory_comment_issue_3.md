@@ -34,9 +34,9 @@ A proposed granular roadmap for satellite-based waste detection:
 * **Spectral Analysis:** Discriminate waste via NDWI and multi-band ratios using Sentinel-2 data.
 
 #### 2. Recommended Data & Tooling
-* **Frameworks:** `PyTorch` is required for training.
-* **Geospatial Pipeline:** Utilize `GDAL` or `Rasterio` for image handling.
-* **Orchestration:** `dask-geopandas` for parallel processing.
+* **Frameworks:** `PyTorch` is required for model definition and training. Ensure you have a version compatible with your CUDA environment (e.g., `pip install torch torchvision`).
+* **Geospatial Pipeline:** Utilize `GDAL` or `Rasterio` for handling satellite imagery. `Rasterio` is highly recommended for its clean Pythonic interface when loading, reprojecting, and saving GeoTIFF files.
+* **Orchestration:** `dask-geopandas` is essential for handling large-scale datasets. It allows you to parallelize the processing of massive geospatial files, effectively distributing workload across CPU cores and avoiding memory bottlenecks during tiling.
 
 
 #### 4. Model Implementation Workflow
