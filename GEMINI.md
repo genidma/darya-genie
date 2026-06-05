@@ -10,6 +10,5 @@ This project is associated with the Google Cloud Project: `darya-genie`.
 The Vertex AI extension is used for prompt management and optimization. Ensure the following APIs are enabled in the `darya-genie` project:
 - Vertex AI API (aiplatform.googleapis.com)
 
-## Workspace Conventions
-- Use `darya-genie` as the `project_id` for all cloud-related tasks.
-- Prompt templates should be stored and managed via the Vertex AI extension.
+## Branching Strategy
+- Features are developed in isolated branches, integrated into `main-dev` for consolidated testing and security validation, and promoted to `main` only for stable releases.
