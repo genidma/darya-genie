@@ -41,29 +41,52 @@ A proposed granular roadmap for satellite-based waste detection:
 
 #### 4. Model Implementation Workflow
 1. **Architecture Selection:**
-   * **YOLOv8 (`ultralytics`):** Best if the primary goal is **real-time inference** and rapid iteration.
-   * **Mask R-CNN (`detectron2` / `torchvision`):** Best if **pixel-perfect instance segmentation** is required.
+   * **YOLOv8 (`ultralytics`):** Best for real-time inference and rapid iteration.
+   * **Mask R-CNN (`detectron2`):** Best if pixel-perfect instance segmentation is required.
 
-2. **Implementation Steps:**
-   * **Environment Setup:**
-     ```bash
-     # For YOLOv8
-     pip install ultralytics
-     # For Mask R-CNN
-     pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
-     ```
-     > [!NOTE]
-     > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`). https://www.whois.com/whois/fbaipublicfiles.com
+2. **Data Preparation (Required Directory Structure):**
+   Before training, your data *must* follow this structure:
+   ```
+   /data/
+     /images/train/ (raw .jpg or .png images)
+     /images/val/
+     /labels/train/ (YOLO .txt files)
+     /labels/val/
+   ```
 
-   * **Data Formatting:**
-     * **YOLO:** `.txt` files in `data/labels/` containing `class_id x_center y_center width height`.
-     * **Mask R-CNN (COCO):** A single JSON file listing images and corresponding RLE/polygon segmentations.
+3. **Data Configuration (YOLO):**
+   Create a `riverine_waste.yaml` file in your root project directory:
+   ```yaml
+   # Path to your dataset root
+   path: /path/to/data/
+   train: images/train
+   val: images/val
+   
+   # Class names
+   names:
+     0: riverine_waste
+   ```
+   * **Label Formatting:** Each `.txt` file in `labels/` must contain lines matching the format: `class_id x_center y_center width height`.
+     * *Example:* `0 0.5 0.5 0.2 0.2` (Class 0 at the center with 20% width/height).
 
-   * **Training Script (Example for YOLOv8):**
-     ```python
-     from ultralytics import YOLO
-     # Load model
-     model = YOLO('yolov8n.pt') 
-     # Train
-     model.train(data='riverine_waste.yaml', epochs=50, imgsz=640)
-     ```
+4. **Training Script (YOLOv8 Example):**
+   Ensure `riverine_waste.yaml` is in the same directory as this script.
+   ```python
+   from ultralytics import YOLO
+
+   # 1. Load a pre-trained YOLOv8 model (n=nano, s=small, m=medium, l=large)
+   model = YOLO('yolov8n.pt') 
+
+   # 2. Train using your configuration file
+   model.train(data='riverine_waste.yaml', epochs=50, imgsz=640)
+   ```
+
+5. **Environment Setup:**
+   ```bash
+   # For YOLOv8
+   pip install ultralytics
+   # For Mask R-CNN
+   pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
+   ```
+   > [!NOTE]
+   > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`). https://www.whois.com/whois/fbaipublicfiles.com
