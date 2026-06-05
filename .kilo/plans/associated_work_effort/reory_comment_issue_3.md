@@ -11,11 +11,14 @@ I think a first good point to get started with is, via the [README.md](https://g
 Here are the details specific to this PR and associated PRs that may come out of issue #3 here:
 
 ### 1. Contributor Workflow
-1.a. [ ] **Development:** Please create PRs from your feature branches. Our team will handle merging them into the appropriate development (`main-dev`) or production (`main`) pipelines.
+1.a. [ ] **Environment Setup:** Before installing dependencies, please create a virtual environment to isolate your workspace:
+   * `python -m venv venv`
+   * `source venv/bin/activate` (or `venv\Scripts\activate` on Windows)
+1.b. [ ] **Development:** Please create PRs from your feature branches. Our team will handle merging them into the appropriate development (`main-dev`) or production (`main`) pipelines.
    * To keep your branch up-to-date with our latest changes, please periodically pull from `main-dev`:
      * Fetch: `git fetch origin`
      * Merge: `git merge origin/main-dev`
-1.b. [ ] **Security:** Pass local security audits:
+1.c. [ ] **Security:** Pass local security audits:
    * Install: `pip install pip-audit bandit`
    * Dependency Audit: `pip-audit -r src/api/requirements.txt`
    * SAST Audit: `bandit -r src/api/`
