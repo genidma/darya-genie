@@ -80,6 +80,11 @@ A proposed granular roadmap for satellite-based waste detection:
    # 2. Train using your configuration file
    model.train(data='riverine_waste.yaml', epochs=50, imgsz=640)
    ```
+   > [!IMPORTANT]
+   > **GPU Highly Recommended:** Training on a CPU is impractical for these models. A GPU is required. If you do not have local access to an NVIDIA GPU, use these free-tier cloud environments:
+   > * **Google Colab:** Set `Runtime` -> `Change runtime type` to `T4 GPU`.
+   > * **Kaggle Kernels:** Enable `GPU T4 x2` in the accelerator settings on the right sidebar.
+   > * **Setup:** You will need to install the dependencies (`pip install ultralytics`) each time you start a new session.
 
 5. **Environment Setup:**
    ```bash
