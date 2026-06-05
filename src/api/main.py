@@ -6,7 +6,7 @@ import uuid
 
 app = FastAPI(
     title="Darya Genie API",
-    description="Central nervous system for Darya Genie platform: safety certification, field data validation, and micro-incentive payouts.",
+    description="Central nervous system for Darya Genie platform: safety certification, field data validation, and stewardship incentives.",
     version="0.1.0"
 )
 
@@ -19,15 +19,15 @@ class RestorationSchema(BaseModel):
     species: str = Field(..., max_length=100)
     quantity: int = Field(..., gt=0, le=1000)
     photo_url: Optional[str] = None
-    bounty: float = Field(..., gt=0, description="Micro-incentive amount in local currency")
+    stewardship_grant: float = Field(..., gt=0, description="Incentive amount in local currency")
 
-class WasteSchema(BaseModel):
+class MaterialObservationSchema(BaseModel):
     gps_coordinates: tuple[float, float]
     photo_url: str
-    waste_type: str
+    material_type: str
     estimated_volume: float = Field(..., gt=0)
 
-class PaymentResult(BaseModel):
+class PayoutResult(BaseModel):
     status: str
     tx_id: str
     amount: float
@@ -63,20 +63,20 @@ class GISService:
         rounded = (round(coordinates[0], 1), round(coordinates[1], 1))
         return rounded in cls._suitable_sites
 
-class AntiGamingService:
-    """Mock anti-gaming checks – in production this would validate photo metadata, GPS trails, etc."""
+class MaterialIntegrityService:
+    """Mock integrity checks – in production this would validate photo metadata, GPS trails, etc."""
     @classmethod
-    async def validate_waste_submission(cls, data: WasteSchema) -> bool:
+    async def validate_observation(cls, data: MaterialObservationSchema) -> bool:
         # Simple mock: reject if photo_url is suspicious
         if "fake" in data.photo_url.lower():
             return False
         return True
 
-class PaymentGateway:
-    """Mock payment gateway – in production this would call a real payment provider."""
+class PayoutGateway:
+    """Mock payout gateway – in production this would call a real payment provider."""
     @classmethod
-    async def process_payout(cls, user_id: str, amount: float) -> PaymentResult:
-        return PaymentResult(
+    async def process_payout(cls, user_id: str, amount: float) -> PayoutResult:
+        return PayoutResult(
             status="success",
             tx_id=str(uuid.uuid4()),
             amount=amount,
@@ -116,40 +116,40 @@ async def get_current_user(token: str = Header(...)) -> User:
 async def health_check():
     return {"status": "ok", "service": "darya-genie-api"}
 
-@app.post("/api/v1/submit_restoration", response_model=PaymentResult)
+@app.post("/api/v1/submit_restoration", response_model=PayoutResult)
 async def submit_planting(data: RestorationSchema, user: User = Depends(get_current_user)):
     """
     Submit a mangrove restoration planting record.
 
     Steps:
     1. Validate that the planting site is suitable according to the GIS layer.
-    2. Process the micro-incentive payout.
+    2. Process the stewardship incentive payout.
     3. Commit the transaction to the global ledger.
     """
     if not await GISService.is_site_ready(data.coordinates):
         raise HTTPException(status_code=400, detail="Invalid Planting Site")
 
-    payment = await PaymentGateway.process_payout(user.id, amount=data.bounty)
+    payment = await PayoutGateway.process_payout(user.id, amount=data.stewardship_grant)
     await GlobalLedger.commit(user.id, "restoration", payment.tx_id)
 
     return payment
 
-@app.post("/api/v1/submit_waste_collection", response_model=PaymentResult)
-async def submit_waste(data: WasteSchema, user: User = Depends(get_current_user)):
+@app.post("/api/v1/submit_material_observation", response_model=PayoutResult)
+async def submit_observation(data: MaterialObservationSchema, user: User = Depends(get_current_user)):
     """
-    Submit a waste collection record.
+    Submit a material observation record.
 
     Steps:
-    1. Run anti-gaming checks on the submission.
-    2. Process the micro-incentive payout.
+    1. Run integrity checks on the submission.
+    2. Process the stewardship incentive payout.
     3. Commit the transaction to the global ledger.
     """
-    if not await AntiGamingService.validate_waste_submission(data):
-        raise HTTPException(status_code=400, detail="Suspicious submission – anti-gaming check failed")
+    if not await MaterialIntegrityService.validate_observation(data):
+        raise HTTPException(status_code=400, detail="Observation integrity check failed")
 
-    # Example bounty calculation: fixed rate per volume
-    bounty = data.estimated_volume * 0.5
-    payment = await PaymentGateway.process_payout(user.id, amount=bounty)
-    await GlobalLedger.commit(user.id, "waste_collection", payment.tx_id)
+    # Example incentive calculation: fixed rate per volume
+    incentive = data.estimated_volume * 0.5
+    payment = await PayoutGateway.process_payout(user.id, amount=incentive)
+    await GlobalLedger.commit(user.id, "material_observation", payment.tx_id)
 
     return payment
