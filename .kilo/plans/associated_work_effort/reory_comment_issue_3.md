@@ -29,7 +29,7 @@ Here are the details specific to this PR and associated PRs that may come out of
    2.a.i. [ ] Direct Object Detection (YOLOv8 or Mask R-CNN)
       * Use tiling script: `src/genie_brain/detection/tile_satellite_image.py`
       * Dataset: [AerialWaste dataset](https://github.com/nahitorres/AerialWaste)
-   2.a.ii. [ ] Spectral Analysis (NDWI/multi-band ratios using Sentinel-2)
+   2.a.ii. [ ] Spectral Analysis (NDWI/multi-band ratios using [Sentinel-2 data](https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-missions/sentinel-2))
 
 2.b. [ ] **Recommended Data & Tooling**
    2.b.i. [ ] Frameworks: `PyTorch` (compatible with CUDA environment: `pip install torch torchvision`)
