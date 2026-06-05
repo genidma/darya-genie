@@ -145,8 +145,8 @@ All PRs must be merged into `main-dev` first for testing. Only after passing all
 
 | Handle | PR Link | Synopsis |
 | :--- | :--- | :--- |
-| @HMS091 | [PR #5](https://github.com/genidma/darya-genie/pull/5) | Implementation of FastAPI service for restoration and waste submission. |
-| @YuuGR1337 | [PR #7](https://github.com/genidma/darya-genie/pull/7) | Exploration of satellite imagery for pollution detection. |
+| [@HMS091](https://github.com/HMS091) | [PR #5](https://github.com/genidma/darya-genie/pull/5) | Implementation of FastAPI service for restoration and waste submission. |
+| [@YuuGR1337](https://github.com/YuuGR1337) | [PR #7](https://github.com/genidma/darya-genie/pull/7) | Exploration of satellite imagery for pollution detection. |
 
 ### Credits
 
