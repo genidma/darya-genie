@@ -8,7 +8,7 @@ To turn Issue #3 into actionable tasks, we have developed a more granular techni
 * **Direct Object Detection (Primary Focus):**
     * **Objective:** Identify unauthorized landfills and large waste blockages in riverbanks.
     * **Architecture:** Utilize **YOLOv8** or **Mask R-CNN** via the `ultralytics` or `detectron2` libraries. These are better suited for fast, high-resolution processing than legacy models.
-    * **Action:** Begin by fine-tuning on the [AerialWaste dataset](https://github.com/AerialWaste/dataset) or similar overhead datasets to establish a baseline model.
+    * **Action:** Begin by fine-tuning on the [AerialWaste dataset](https://github.com/nahitorres/AerialWaste) or similar overhead datasets to establish a baseline model.
     * **Preprocessing:** Implement tiling of high-res satellite imagery to manage memory constraints for model inference.
 
 * **Spectral Analysis (Advanced):**
