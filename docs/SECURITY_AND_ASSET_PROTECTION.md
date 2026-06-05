@@ -1,81 +1,51 @@
-# Security & Asset Protection Protocol
+# Environmental Safety & Stewardship Protocol
 
 **Document Version:** 1.0  
-**Effective Date:** 2026-06-03  
-**Classification:** Internal Operational Policy  
+**Effective Date:** 2026-06-05  
+**Classification:** Operational Policy  
 
 ---
 
-## 1. Physical Hardening: Rolling Vault Truck Protocols
+## 1. Field Safety Standards
 
-The mobile command truck serves as our primary rolling vault, ensuring secure transport and storage of all robotic assets in the challenging urban environment of Lyari Basin.
+The safety of our field team is the project's primary asset. Operational planning must prioritize the physical and psychological well-being of all personnel.
 
-### 1.1 Truck Security Standards
-- **Reinforced Storage Vault:** The truck bed is fitted with a modular, weather-sealed, steel-reinforced compartment rated IP67 against dust and water ingress.
-- **Locking Mechanisms:** Primary lock: Abloy PL362 (pick-resistant, hardened steel). Secondary: GPS-enabled electromechanical lock integrated with the vehicle alarm.
-- **Alarm System:** Viper 5706V 2-way security system with shock sensors, door sensors, and tilt sensors. Alerts dispatched to GM and lead technician via SMS/onboard comms.
-- **Surveillance:** 360° dashcam coverage with night vision capability. Footage retained locally for 30 days and automatically uploaded to secure cloud storage when in WiFi range.
+### 1.1 Field Equipment & PPE
+- **Essential Gear:** All field personnel must wear high-visibility gear, appropriate footwear, and personal protective equipment (PPE) as dictated by the riverine environment.
+- **Communications:** Each field team must carry redundant, reliable, battery-operated communication devices for emergency coordination.
+- **Health Monitoring:** Field operations must include provisions for hydration, nutrition, and environmental protection (sun/toxin exposure).
 
-### 1.2 Transit Security Procedures
-- **Pre-Movement Check:** All equipment locked, latches secured, and GPS tracker activated. Verification logged in transit sheet.
-- **Escort Protocol:** On high-risk routes, a community guardian or hired security rides along during transit.
-- **Route Planning:** GM reviews daily travel plans using the day's risk assessment and chooses primary/alternate routes accordingly.
+### 1.2 Operational Environment
+- **Site Assessment:** Prior to any field work, a comprehensive site suitability analysis (utilizing GIS data) must be conducted to ensure environmental stability and access safety.
+- **Community Integration:** Field operations are conducted in partnership with community representatives. No activity occurs without established local understanding.
+- **Extraction Protocol:** All missions are planned with a designated 'Cold Zone' (a pre-vetted safe area) that is always accessible in the event of unforeseen environmental or operational hazards.
 
 ---
 
-## 2. Modular Decoupling: End-of-Shift Component Removal Ritual
+## 2. Stewardship Rituals
 
-At the close of each operational day, critical components undergo a deliberate removal ritual to reduce theft risk and enable overnight maintenance.
+To ensure the integrity of the ecosystem restoration process, all operational workflows are designed to minimize environmental disruption.
 
-### 2.1 Component Inventory Protocol
-| Component | Storage Location | Security Action |
+### 2.1 Environmental Stewardship Protocol
+| Activity | Objective | Stewardship Action |
 |-----------|------------------|---------------|
-| UGV Compute Block (Jetson/RPI) | Mobile Vault | Removed nightly |
-| Drone Battery Packs | Fire-Safe LiPo Bags | Removed nightly |
-| Motor Controller ESP32 Units | Anti-Static Cases | Removed nightly |
-| Sensor Arrays (Lidar, Camera) | Shock-Proof Cases | Removed nightly |
-
-### 2.2 Removal Checklist
-1. Power down all systems and disconnect batteries.
-2. Photograph each component's serial number and condition for digital log.
-3. Place components in designated cases with RFID tags.
-4. Verify case count against daily manifest (must match).
-5. Secure cases in truck vault; lock and activate alarm.
+| Restoration Prep | Habitat protection | Minimal-impact survey protocols |
+| Component Placement | Ecosystem integrity | Non-invasive installation methods |
+| Site Monitoring | Growth tracking | Passive observation only |
 
 ---
 
-## 3. Silent Telemetry: Independent GPS/LoRaWAN Tracking
+## 3. Stewardship Network
 
-Each major asset carries independent tracking to enable silent recovery in event of theft or loss.
+Our impact extends into the social domain, leveraging local knowledge and commitment to ecosystem health.
 
-### 3.1 Tracking Hardware Specification
-- **GPS Module:** Quectel L86-M33 (99% sensitivity, AGPS-ready) integrated into each asset's control board.
-- **Radio Backup:** RFM95W LoRa module (433 MHz) transmitting heartbeat every 30 seconds to community gateway nodes.
-- **Power Source:** Dedicated LiPo cell providing >72 hours of independent tracking.
-- **Activation:** GPS/LoRa units remain active as long as asset battery retains >20% capacity; fallback to dedicated cell.
-
-### 3.2 Recovery Network
-- **Community Gateways:** Volunteers host LoRaWAN gateways on rooftops; their registration and monthly stipend covered under "Micro-Incentive Seeding" budget.
-- **Law Enforcement:** Encrypted geofence breach alerts sent to GM and local community liaison; recovery actions coordinated through established local networks.
-
----
-
-## 4. Social Shield: Community Custodianship & Guardian Incentives
-
-Our security model extends into the social domain, leveraging local knowledge and stake in the project as a deterrent against sabotage or theft.
-
-### 4.1 Guardian Incentive Program
-- **Monthly Stipend:** Rs 5,000 provided to registered community guardians who assist in overnight site watches and transit escort duties.
-- **Micro-Wallet Integration:** Guardians receive a QR code sticker; any citizen scanning it to report suspicious activity earns a Rs 50 micro-reward.
-- **Recognition Tiers:** Based on cumulative contributions, guardians progress through Bronze/Silver/Gold tiers with increasing monthly stipends and priority employment consideration.
-
-### 4.2 Cultural Integration Strategy
-- **Local Artisan Collaboration:** UGV styling incorporates traditional Karachi truck art; community sees the robot as "theirs."
-- **School Partnership:** Local schools invited to name individual drones; children become invested stakeholders.
-- **Transparency Boards:** Daily operational summary posted at neighborhood mosque/community center; open-source logs available via QR code.
+### 3.1 Community Partnership
+- **Local Knowledge:** Restoration efforts rely on insights from local community members to understand seasonal riverine cycles.
+- **Cultural Integration:** Our restoration approach respects local practices and environmental knowledge, ensuring that the community feels invested in the riverine restoration.
+- **Transparency:** Operational summaries and restoration progress reports are made accessible to community stakeholders via transparent reporting channels.
 
 ---
 
 ## Worker Welfare Note
 
-All security protocols are designed around the **Alcoa Keystone Habit**: by ensuring our workers feel protected and valued, we create operational discipline that naturally extends to asset protection. Every security procedure considers the physical and psychological safety of personnel first, recognizing that secure workers equal secure hardware.
+All protocols are designed around the **Alcoa Keystone Habit**: by ensuring our workers feel protected, healthy, and valued, we create operational excellence that naturally extends to the care of the riverine environment. Every procedure considers the physical and psychological safety of personnel first.
