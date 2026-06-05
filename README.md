@@ -1,6 +1,6 @@
 # Darya Genie (दरिया जिनी / دریا جنی) 🌊🤖
 
-> **Grassroots, community-funded robotic river restoration for the Lyari Basin, Karachi.**
+> **Proposed: Grassroots, community-funded robotic river restoration for the Lyari Basin, Karachi and another river that is to be determined in India.**
 
 Darya Genie is an open-source, decentralized civic-tech initiative designed to bypass institutional gridlock and clean up urban waterways. By combining low-cost autonomous waste-harvesting hardware with a culturally resonant, interactive mascot and a micro-equity donation loop, we shift the environmental narrative from "the state's problem" to a community-owned triumph.
 
