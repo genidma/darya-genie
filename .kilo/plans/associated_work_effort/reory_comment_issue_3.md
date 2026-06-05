@@ -15,7 +15,12 @@ Here are the details specific to this PR and associated PRs that may come out of
    * `python -m venv venv`
    * `source venv/bin/activate` (or `venv\Scripts\activate` on Windows)
    > [!IMPORTANT]
-   > **Disk Space Management:** The dependencies for this project are significant. Always use `--no-cache-dir` with `pip install` commands to prevent "No space left on device" errors.
+   > **Disk Space Management:** The dependencies for this project are significant. Anticipate needing 5-11GB total (Environment, Datasets, Tiled Images, Model Checkpoints).
+   > * **Why use `--no-cache-dir`?** Normally, `pip` saves downloaded installer files in a local cache. Adding this flag tells `pip` to download, install, and immediately discard those files, saving crucial disk space.
+   > * **Cloud Alternatives (Free Tier):** If you lack local space, use these cloud environments:
+   >    * **Google Colab:** ~15GB ephemeral storage. *Tip:* Mount Google Drive to persist data and model checkpoints.
+   >    * **Kaggle Kernels:** ~30GB scratch space. *Tip:* Use the "Datasets" feature to persist your training data between sessions.
+   >    * **General Tip:** Always offload training and heavy data processing to these environments. Use your local machine only for code editing and lightweight tasks.
 
 1.b. [ ] **Development:** Please create PRs from your feature branches. Our team will handle merging them into the appropriate development (`main-dev`) or production (`main`) pipelines.
    * To keep your branch up-to-date with our latest changes, please periodically pull from `main-dev`:
