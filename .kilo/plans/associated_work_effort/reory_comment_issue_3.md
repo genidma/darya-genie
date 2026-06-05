@@ -11,13 +11,10 @@ I think a first good point to get started with is, via the [README.md](https://g
 Here are the details specific to this PR and associated PRs that may come out of issue #3 here:
 
 ### 1. Contributor Workflow
-1.a. [ ] **Development:** Target all new feature PRs to the `main-dev` branch as a redirection.
-   * To synchronize a feature branch (PR) with `main-dev`:
+1.a. [ ] **Development:** Please create PRs from your feature branches. Our team will handle merging them into the appropriate development (`main-dev`) or production (`main`) pipelines.
+   * To keep your branch up-to-date with our latest changes, please periodically pull from `main-dev`:
      * Fetch: `git fetch origin`
-     * Checkout: `git checkout <branch-name>`
-     * Merge/Rebase: `git merge origin/main-dev` or `git rebase origin/main-dev`
-     * Resolve: Fix any merge conflicts.
-     * Push: `git push origin <branch-name>`
+     * Merge: `git merge origin/main-dev`
 1.b. [ ] **Security:** Pass local security audits:
    * Install: `pip install pip-audit bandit`
    * Dependency Audit: `pip-audit -r src/api/requirements.txt`
