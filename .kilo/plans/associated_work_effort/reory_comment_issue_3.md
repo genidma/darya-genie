@@ -38,7 +38,32 @@ A proposed granular roadmap for satellite-based waste detection:
 * **Geospatial Pipeline:** Utilize `GDAL` or `Rasterio` for image handling.
 * **Orchestration:** `dask-geopandas` for parallel processing.
 
-#### 3. First Step
-Let us start with a research spike: **identify the best subset of the AerialWaste dataset for riverine contexts and propose a data ingestion pipeline using `rasterio`.**
 
-Let me know if this technical direction aligns with your experience, or if you'd like to adjust the model/library choices!
+#### 4. Model Implementation Workflow
+1. **Architecture Selection:**
+   * **YOLOv8 (`ultralytics`):** Best if the primary goal is **real-time inference** and rapid iteration.
+   * **Mask R-CNN (`detectron2` / `torchvision`):** Best if **pixel-perfect instance segmentation** is required.
+
+2. **Implementation Steps:**
+   * **Environment Setup:**
+     ```bash
+     # For YOLOv8
+     pip install ultralytics
+     # For Mask R-CNN
+     pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
+     ```
+     > [!NOTE]
+     > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`).
+
+   * **Data Formatting:**
+     * **YOLO:** `.txt` files in `data/labels/` containing `class_id x_center y_center width height`.
+     * **Mask R-CNN (COCO):** A single JSON file listing images and corresponding RLE/polygon segmentations.
+
+   * **Training Script (Example for YOLOv8):**
+     ```python
+     from ultralytics import YOLO
+     # Load model
+     model = YOLO('yolov8n.pt') 
+     # Train
+     model.train(data='riverine_waste.yaml', epochs=50, imgsz=640)
+     ```
