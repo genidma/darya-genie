@@ -71,3 +71,12 @@ Here are the details specific to this PR and associated PRs that may come out of
         > `fbaipublicfiles.com` is a domain owned by Meta. It is a legitimate and trusted source for hosting assets related to their open-source AI projects (like `detectron2`). https://www.whois.com/whois/fbaipublicfiles.com
 
 - [ ] **2.d. First Step:** Identify the best subset of the AerialWaste dataset for riverine contexts and propose a data ingestion pipeline using `rasterio`.
+
+---
+If any aspect of this instruction set is vague/does not make sense and/or needs amendments, then definitely feel free to share your thoughts here!
+
+Thank you sincerely, and it is great to connect with you!
+
+Cheers!
+
+@genidma (with direct support by [gemini](https://gemini.google.com/)) note: no official affiliation. I have access to the same tools as anyone else, but Gemini did all the heavy research/lifting here. Thank you!
