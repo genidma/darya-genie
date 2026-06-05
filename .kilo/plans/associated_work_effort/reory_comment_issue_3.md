@@ -29,6 +29,7 @@ A proposed granular roadmap for satellite-based waste detection:
 #### 1. Detection Methodologies & Implementation
 * **Direct Object Detection:** Identify unauthorized landfills/blockages. 
     * *Architecture:* Utilize YOLOv8 or Mask R-CNN.
+    * *Script:* A tiling script is available at `src/genie_brain/detection/tile_satellite_image.py` to prepare high-resolution images for detection.
     * *Action:* I have been told that a good repo to begin with is via the fine-tuning via [AerialWaste dataset](https://github.com/nahitorres/AerialWaste).
 * **Spectral Analysis:** Discriminate waste via NDWI and multi-band ratios using Sentinel-2 data.
 
