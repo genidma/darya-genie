@@ -1,4 +1,4 @@
-# Darya Genie (دريا جني) 🌊🤖
+# Darya Genie (दरिया जिनी / دریا جنی) 🌊🤖
 
 > **Grassroots, community-funded robotic river restoration for the Lyari Basin, Karachi.**
 
