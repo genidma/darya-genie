@@ -1,8 +1,12 @@
-# Darya Genie (دريا جني) 🌊🤖
+# Darya Genie (दरिया जिनी / دریا جنی) 🌊🤖
 
-> **Grassroots, community-funded robotic river restoration for the Lyari Basin, Karachi.**
+> **Proposed: Grassroots, community-funded robotic river restoration for the Lyari Basin, Karachi and another river that is to be determined in India.**
 
 Darya Genie is an open-source, decentralized civic-tech initiative designed to bypass institutional gridlock and clean up urban waterways. By combining low-cost autonomous waste-harvesting hardware with a culturally resonant, interactive mascot and a micro-equity donation loop, we shift the environmental narrative from "the state's problem" to a community-owned triumph.
+
+### Founder's Vision
+
+Darya (meaning river in Hindi or Urdu) Genie was born from lived experience near polluted rivers—specifically 5 years living 1 km away, where the daily dust and pollution wreaked havoc on my asthma—a personal journey sparked by watching modern travel vlogs revisit these same waterways. The vision is a humble one: What if you could fork a repository here on GitHub and immediately access the material needed to help clean up a local river or stream safely, sustainably, and without creating further environmental or safety issues?
 
 ## Concept Visuals
 
@@ -26,17 +30,11 @@ This repository is organized as follows:
 │   └── api/               # Authentication and certification middleware
 ├── docs/                  
 │   ├── safety/            # Darya Safety-First Certification Course (45-min curriculum)
-│   │   ├── module_01_safety.md      # Hazard identification and PPE
-│   │   ├── module_02_equipment.md   # Equipment handling and protocols
-│   │   ├── module_03_environment.md   # River toxin awareness and decon
-│   │   ├── assessment_quiz.md       # Final competency assessment
-│   │   └── mangrove_propagation.md   # Restoration Lead certification module
 │   ├── restoration/
 │   │   └── gis_protocols.md         # Satellite-to-site suitability logic
 │   ├── CURRICULUM.md      # Educational outreach materials
 │   ├── DRONE_PROTOCOLS.md # Drone-to-UGV coordination protocols
-│   ├── SECURITY_AND_ASSET_PROTECTION.md # Asset protection and security policy
-│   └── ANTI_GAMING_AND_MATERIAL_INTEGRITY_PROTOCOL.md # Anti-fraud for drop-hub incentive system
+│   └── SECURITY_AND_ASSET_PROTECTION.md # Asset protection and security policy
 ├── scripts/
 │   └── certification_gatekeeper.py  # Validates quiz and updates User_Registry
 └── tests/                 # Hardware-in-the-loop (HIL) simulation scripts
@@ -58,7 +56,7 @@ Our expanded **Year 01 Pilot Target is $320,000 CAD**, built explicitly to elimi
 | **Upward Mobility & Executive Training** | $40,000 | Structured 2-to-3 year fast-track program. Earmarked funds for leadership workshops, advanced robotics upskilling, and business management training to transition field workers into future Directors. |
 | **Holistic Support, Meals & Office Care** | $35,000 | Daily high-nutrition catered meals for all ground and aerial crew, field health checks, high-grade personal protective equipment (PPE), and air-conditioned office workspaces, with showers and a place to take naps |
 | **Core Ground Autonomy (UGV)** | $25,000 | Rugged tracked UGV chassis fabrication, Jetson/Raspberry Pi compute blocks, conveyor mechanics, sealed sensor suites, and local W-11 truck art styling. |
-| **Micro-Incentive Seeding** | $10,000 | Initial liquidity to back local community collection drop-hubs for immediate wallet payouts. This complements robot operations by incentivizing fine-detail collection in narrow banks/alleys unreachable by UGV, creating a "Micro-Equity Loop" where citizens become restoration partners. See [Anti-Gaming Protocol](/docs/ANTI_GAMING_AND_MATERIAL_INTEGRITY_PROTOCOL.md) for fraud prevention measures. |
+| **Community Seeding** | $10,000 | Initial liquidity to back local community collection drop-hubs for immediate wallet payouts. This complements robot operations by incentivizing fine-detail collection in narrow banks/alleys unreachable by UGV, creating a "Micro-Equity Loop" where citizens become restoration partners. |
 
 *Every 5-rupee (or 20 rupee) micro-donation processed by the gateway flows directly into sustaining local incentive liquidity, protecting team welfare, and supporting hardware maintenance.*
 
@@ -69,7 +67,7 @@ To understand the mathematical velocity of decentralized civic tech, consider th
 * **Target Activation:** 20% of Karachi's projected population (~4.62 Million active community participants).
 * **Micro-Equity Quantum:** A single, one-time donation of **20 PKR (~$0.07 CAD)** per person.
 
-$$\text{Total Capital} = 4,620,000 \times 20\text{ PKR} = 92,400,000\text{ PKR}$$
+$$	ext{Total Capital} = 4,620,000 	imes 20	ext{ PKR} = 92,400,000	ext{ PKR}$$
 
 This single, low-friction activation wave yields approximately **$322,300 CAD**. 
 
@@ -115,9 +113,39 @@ See [GIS & Satellite Suitability Protocol](/docs/restoration/gis_protocols.md) f
 
 ## 🔒 Security & Asset Protection
 
-For a detailed breakdown of our multi-domain physical, technical, and social security protocols, please review the [Security & Asset Protection Protocol](/docs/SECURITY_AND_ASSET_PROTECTION.md).
+For a detailed breakdown of our multi-domain physical and social security protocols, please review the [Security & Asset Protection Protocol](/docs/SECURITY_AND_ASSET_PROTECTION.md).
 
-## Contributors
+## 🛠️ Security Audit Workflow
+
+We maintain high code integrity by performing regular security audits. To audit new API contributions:
+
+```bash
+# 1. Run dependency audit to identify vulnerabilities
+~/.local/bin/pip-audit -r src/api/requirements.txt
+
+# 2. Run static analysis (SAST) to detect common Python security flaws
+~/.local/bin/bandit -r src/api/
+```
+
+## 🔄 Development Workflow
+
+We follow a structured [branching strategy](GEMINI.md#branching-strategy) to ensure all contributions pass through rigorous testing and security verification before hitting production:
+
+1. **Gemini Features:** `feature/gemini-updates` (Initial feature development)
+2. **Integration/Testing:** `main-dev` (Consolidated features, security audits, and automated testing)
+3. **Production:** `main` (Stable release candidate)
+
+All PRs must be merged into `main-dev` first for testing. Only after passing all audits and tests can changes be promoted to `main`.
+
+## 🤝 Credits and Notable Contributions
+
+### Notable Contributions
+
+| Handle | PR Link | Synopsis |
+| :--- | :--- | :--- |
+| [@HMS091](https://github.com/HMS091) | [PR #5](https://github.com/genidma/darya-genie/pull/5) | Implementation of FastAPI service for restoration and waste submission. |
+
+### Credits
 
 - [Gemini by Google](https://gemini.google.com/) as the original brainstorming partner and lead architect
 - [@genidma](https://github.com/genidma) for the origination of the idea
