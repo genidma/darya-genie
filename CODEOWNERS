@@ -1,0 +1,28 @@
+# CODEOWNERS
+
+# These users are the primary owners of this repository and should review all changes.
+# They have write access and can merge pull requests.
+
+# GitHub usernames
+* @genidma @HMS091 @Kilo-Org
+
+# Security and Architecture reviews
+/src/api/
+src/api/horizontal_pay_dev.py
+docs/SECURITY_AND_ASSET_PROTECTION.md
+GEMINI.md
+
+# Testing and Validation
+/tests/
+scripts/certification_gatekeeper.py
+
+# Hardware/Manufacturing
+hardware/
+firmware/
+docs/safety/
+docs/restoration/
+
+# Infrastructure and DevOps
+.kilo/
+pyproject.toml
+README.md

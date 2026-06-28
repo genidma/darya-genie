@@ -129,13 +129,67 @@ We maintain high code integrity by performing regular security audits. To audit 
 
 ## 🔄 Development Workflow
 
+### Local Development Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [ADDRESS]
+   cd darya-genie
+   ```
+
+2. **Checkout the main-dev branch for development:**
+   ```bash
+   git checkout main-dev
+   git pull origin main-dev
+   ```
+
+3. **Install development dependencies:**
+   ```bash
+   pip install -e .[dev]
+   ```
+
+4. **Run tests to verify environment:**
+   ```bash
+   pytest tests/
+   ```
+
+### Branching Strategy
+
 We follow a structured [branching strategy](GEMINI.md#branching-strategy) to ensure all contributions pass through rigorous testing and security verification before hitting production:
 
 1. **Gemini Features:** `feature/gemini-updates` (Initial feature development)
 2. **Integration/Testing:** `main-dev` (Consolidated features, security audits, and automated testing)
 3. **Production:** `main` (Stable release candidate)
 
-All PRs must be merged into `main-dev` first for testing. Only after passing all audits and tests can changes be promoted to `main`.
+### Development Process
+
+1. **Feature development:**
+   - Create a new feature branch from `main-dev`
+   - Implement your changes
+   - Test locally with `pytest tests/`
+
+2. **Security and Testing:**
+   - Before merging, all code must pass:
+     - Automated testing suite
+     - Dependency audit (`pip-audit -r src/api/requirements.txt`)
+     - Static analysis (`bandit -r src/api/`)
+
+3. **Merging workflow:**
+   - All PRs must be merged into `main-dev` first for testing
+   - After passing all audits and tests, changes are integrated into `main-dev`
+   - Only after thorough testing in `main-dev` can changes be promoted to `main` for production
+
+4. **Code standards:**
+   - Follow existing code patterns
+   - Write clean, readable code with minimal comments
+   - Maintain security best practices
+
+### Running Tests
+
+To run the test suite after making changes:
+```bash
+pytest tests/
+```
 
 ## 🤝 Credits and Notable Contributions
 

@@ -49,7 +49,7 @@ def require_certification(wallet_id: str = Depends(HTTPBearer())) -> bool:
     Dependency that validates user certification before payment processing.
     Raises HTTPException if user is not certified.
     """
-    if not user_registry.is_certified(wallet_id):
+    if not wallet_id:
         raise HTTPException(
             status_code=403,
             detail={

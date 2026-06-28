@@ -15,16 +15,16 @@ app = FastAPI(
 # ---------------------------------------------------------------------------
 
 class RestorationSchema(BaseModel):
-    coordinates: tuple[float, float] = Field(..., description="(lat, lng) of planting site")
+    coordinates: tuple[float, float] = Field(..., description="(lat, [ADDRESS]) of planting site")
     species: str = Field(..., max_length=100)
     quantity: int = Field(..., gt=0, le=1000)
     photo_url: Optional[str] = None
     stewardship_grant: float = Field(..., gt=0, description="Incentive amount in local currency")
 
-class MaterialObservationSchema(BaseModel):
+class WasteCollectionSchema(BaseModel):
     gps_coordinates: tuple[float, float]
     photo_url: str
-    material_type: str
+    waste_type: str
     estimated_volume: float = Field(..., gt=0)
 
 class PayoutResult(BaseModel):
@@ -66,7 +66,7 @@ class GISService:
 class MaterialIntegrityService:
     """Mock integrity checks – in production this would validate photo metadata, GPS trails, etc."""
     @classmethod
-    async def validate_observation(cls, data: MaterialObservationSchema) -> bool:
+    async def validate_observation(cls, data: WasteCollectionSchema) -> bool:
         # Simple mock: reject if photo_url is suspicious
         if "fake" in data.photo_url.lower():
             return False
@@ -135,7 +135,7 @@ async def submit_planting(data: RestorationSchema, user: User = Depends(get_curr
     return payment
 
 @app.post("/api/v1/submit_material_observation", response_model=PayoutResult)
-async def submit_observation(data: MaterialObservationSchema, user: User = Depends(get_current_user)):
+async def submit_observation(data: WasteCollectionSchema, user: User = Depends(get_current_user)):
     """
     Submit a material observation record.
 
