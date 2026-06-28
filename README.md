@@ -204,5 +204,7 @@ pytest tests/
 - [Gemini by Google](https://gemini.google.com/) as the original brainstorming partner and lead architect
 - [@genidma](https://github.com/genidma) for the origination of the idea
 - [Kilo - Nvidia Nemotron 3 Super(free)](https://github.com/Kilo-Org/kilocode) for helping update the README and helping develop the very first iteration of the codebase
-- [Kilo - Laguna M1](https://github.com/Kilo-Org/kilocode) for admin tasks
+- [Kilo-Org/kilocode] for admin tasks
 - [Qoder](https://qoder.com/) (formerly Lingma) for helping link the image to the README.
+- [Cohere Code](https://cohere.com) for repository maintenance and workflow documentation
+- [Cohere North Mini Code](https://cohere.com) for development and bug fixes
