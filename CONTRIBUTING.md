@@ -87,6 +87,90 @@ Before merging to `main-dev`:
 - Check existing documentation
 - Look at the project's history for patterns
 
+## Contributor Workflow (Issue #3 - Satellite Imagery Detection)
+
+### Environment Setup (1.a)
+
+Before installing dependencies, create a virtual environment to isolate your workspace:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+> **Disk Space Management:** The dependencies for this project are significant. Anticipate needing 5-11GB total (Environment, Datasets, Tiled Images, Model Checkpoints).
+>
+> * **Why use `--no-cache-dir`?** Normally, `pip` saves downloaded installer files in a local cache. Adding this flag tells `pip` to download, install, and immediately discard those files, saving crucial disk space.
+> * **Cloud Alternatives (Free Tier):** If you lack local space, use these cloud environments:
+>    * **Google Colab:** ~15GB ephemeral storage. *Tip:* Mount Google Drive to persist data and model checkpoints.
+>    * **Kaggle Kernels:** ~30GB scratch space. *Tip:* Use the "Datasets" feature to persist your training data between sessions.
+>    * **General Tip:** Always offload training and heavy data processing to these environments. Use your local machine only for code editing and lightweight tasks.
+
+Install detection dependencies:
+
+```bash
+pip install --no-cache-dir -e ".[detection]"
+```
+
+### Development (1.b)
+
+Please create PRs from your feature branches. Changes are merged into `main-dev` for testing and then promoted to `main` for production.
+
+```bash
+git fetch origin
+git merge origin/main-dev
+```
+
+### Security (1.c)
+
+Pass local security audits before submitting PRs:
+
+```bash
+pip install --no-cache-dir pip-audit bandit
+pip-audit -r src/api/requirements.txt
+bandit -r src/api/
+```
+
+### Getting Started with Detection (Issue #3)
+
+1. **Read the README.md** to understand the project proposition.
+2. **Explore the detection module** at `src/genie_brain/detection/`.
+3. **Run the data ingestion pipeline** to prepare the AerialWaste dataset for riverine contexts.
+4. **Train models** using the YOLOv8 or Mask R-CNN pipelines documented below.
+
+### Detection Pipeline
+
+The detection pipeline supports two architectures:
+
+- **YOLOv8** (recommended for fast training): `src/genie_brain/detection/train_yolo.py`
+- **Mask R-CNN** (for instance segmentation): `src/genie_brain/detection/mask_rcnn_pipeline.py`
+
+Data ingestion pipeline for the AerialWaste dataset (filtered for riverine contexts):
+
+```python
+from src.genie_brain.detection import RiverineAerialWasteIngestor
+
+ingestor = RiverineAerialWasteIngestor(
+    root_dir="/data/aerialwaste",
+    output_dir="/data/riverine_waste",
+    tile_size=640,
+)
+result = ingestor.ingest(
+    metadata_path="/data/aerialwaste/metadata.json",
+    geojson_path="/data/aerialwaste/river_boundaries.geojson",
+    min_score=0.3,
+)
+```
+
+Spectral analysis for river health assessment:
+
+```python
+from src.genie_brain.detection import analyze_multispectral, river_health_assessment
+
+results = analyze_multispectral("sentinel2_image.tif", output_dir="./spectral_output")
+assessment = river_health_assessment("sentinel2_image.tif")
+```
+
 ## Developer Guidelines
 
 This repository operates under specific guidelines to ensure code quality, security, and maintainability. Please review and follow these standards when contributing.

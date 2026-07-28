@@ -111,6 +111,27 @@ See [GIS & Satellite Suitability Protocol](/docs/restoration/gis_protocols.md) f
 
 ---
 
+## Detection Pipeline (Issue #3)
+
+Darya Genie includes a satellite imagery detection pipeline for identifying pollution and waste in waterways using ML/CV techniques.
+
+### Capabilities
+
+- **Tiling:** `src/genie_brain/detection/tile_satellite_image.py` — tiles large GeoTIFFs into optimized patches for model input, with overlap support and label extraction.
+- **Spectral Analysis:** `src/genie_brain/detection/spectral_analysis.py` — computes NDVI, NDWI, AWI, and NDBI indices from Sentinel-2 multispectral data for river health assessment.
+- **Data Ingestion:** `src/genie_brain/detection/data_ingestion/riverine_ingest.py` — filters the AerialWaste dataset for riverine contexts and prepares YOLO-compatible training data.
+- **Model Training:** `src/genie_brain/detection/train_yolo.py` — YOLOv8 training pipeline for riverine waste detection.
+- **Mask R-CNN:** `src/genie_brain/detection/mask_rcnn_pipeline.py` — instance segmentation pipeline for detailed waste object detection.
+- **Configuration:** `src/genie_brain/detection/riverine_waste.yaml` — YOLO dataset configuration with 8 riverine waste classes.
+
+### Quick Start
+
+```bash
+pip install --no-cache-dir -e ".[detection]"
+python -m src.genie_brain.detection.data_ingestion.riverine_ingest
+python -m src.genie_brain.detection.train_yolo
+```
+
 ## 🔒 Security & Asset Protection
 
 For a detailed breakdown of our multi-domain physical and social security protocols, please review the [Security & Asset Protection Protocol](/docs/SECURITY_AND_ASSET_PROTECTION.md).

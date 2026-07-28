@@ -1,0 +1,15 @@
+path: /data/riverine_waste
+train: /data/riverine_waste/images/train
+val: /data/riverine_waste/images/val
+test: /data/riverine_waste/images/test
+
+nc: 8
+names:
+  0: plastic_bottles
+  1: plastic_bags
+  2: floating_debris
+  3: accumulated_waste
+  4: tires
+  5: construction_waste
+  6: metal_scrap
+  7: organic_waste
