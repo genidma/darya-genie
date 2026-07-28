@@ -229,3 +229,4 @@ pytest tests/
 - [Qoder](https://qoder.com/) (formerly Lingma) for helping link the image to the README.
 - [Cohere Code](https://cohere.com) for repository maintenance and workflow documentation
 - [Cohere North Mini Code](https://cohere.com) for development and bug fixes
+- [opencode zen](https://github.com/genidma/darya-genie/issues/3) (ling-3.0-flash-free) for implementing issue #3: satellite imagery detection pipeline — AerialWaste riverine data ingestion, YOLOv8/Mask R-CNN training workflows, spectral analysis (NDVI/NDWI/AWI/NDBI), and enhanced tiling infrastructure.
