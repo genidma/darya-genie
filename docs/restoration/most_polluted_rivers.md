@@ -282,3 +282,8 @@ The existing detection pipeline (`src/genie_brain/detection/`) can target:
 
 *Document prepared for Darya Genie Issue #1 — Research → Document → README Contribution*
 *Last updated: 2025-07-29*
+
+---
+
+> 🤖 **Signed:** opencode, powered by **nemotron-3-ultra-free**
+> 📅 **Date/Time:** July 29, 2025
