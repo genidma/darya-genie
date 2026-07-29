@@ -24,7 +24,7 @@ Based on comprehensive research from Wikipedia's "List of most polluted rivers" 
 
 ---
 
-## Top 10 Most Polluted Rivers (2025 Consensus Ranking)
+## Top 20 Most Polluted Rivers (2025 Consensus Ranking)
 
 | Rank | River | Country/Region | Primary Pollutants | Affected Population | Key Impact |
 |------|-------|----------------|-------------------|---------------------|------------|
@@ -38,6 +38,21 @@ Based on comprehensive research from Wikipedia's "List of most polluted rivers" 
 | 8 | **Sarno River** | Italy (Campania) | Untreated sewage, agrochemicals, lead | Pompeii region | Antibiotic-resistant bacteria; €180M cleanup stalled |
 | 9 | **Jordan River** | Israel/Jordan/Palestine | Sewage, brackish water diversion, agricultural runoff | Regional | 90% flow reduction since 1960s; ecosystem collapse |
 | 10 | **Mississippi River** | USA (10 states) | Agricultural runoff (N/P), creating 8,000 mi² Gulf dead zone | 20M+ basin | Nutrient pollution from 31 states; largest US river |
+| 11 | **Matanza-Riachuelo** | Argentina (Buenos Aires) | Industrial heavy metals, sewage, petrochemicals | 5M+ | "Most polluted in South America"; ACUMAR cleanup ongoing |
+| 12 | **Mekong River** | 6 SE Asian countries | Dams, sediment starvation, ag runoff, plastic | 60M+ | Emerging crisis; transboundary governance failure |
+| 13 | **Yamuna River** | India (Delhi stretch) | Delhi sewage (58% untreated), industrial effluent | 57M | "Dead" in Delhi stretch; 800M L/day sewage + 44M L industrial |
+| 14 | **Indus River** | China/India/Pakistan | Plastic (#2 globally), ag runoff, industrial | 215M+ | Indus dolphin endangered; 90% ocean plastic from 10 rivers |
+| 15 | **Tietê River** | Brazil (São Paulo) | Domestic sewage, industrial effluents | 22M+ metro | Urban river through megacity; partial recovery in upper stretch |
+| 16 | **Doce River** | Brazil (Minas Gerais/ES) | Mining tailings (Fe, Mn, As) from 2015 dam collapse | Regional | Mariana disaster: 62M m³ toxic mud; 19 dead |
+| 17 | **Oder River** | Poland/Czechia/Germany | Industrial chemicals, salinity, golden algae bloom | Regional | 2022 disaster: 135 tonnes dead fish; transboundary crisis |
+1boundary |
+| 18 | **Osun River** | Nigeria (Osun State) | **Highest microplastics globally** (2024), Hg, cyanide | Osun State | Illegal gold mining; UNESCO sacred grove threatened |
+19 | **Cooum River** | India (Chennai) | 55M L/day untreated sewage, heavy metals | 9K families | 80% worse than treated sewage; fish survive 3-5 hrs |
+20 | **Ishëm River** | Albania (Tirana) | Ammonia, NO₂, suspended solids (exceed EU limits) | Tirana metro | Raw sewage discharge; sea turtle habitat threat |
+
+---
+
+**Note**: Rankings synthesized from Wikipedia dynamic list (150+ refs), LG Sonic 2024-2025 Report, The Environmental Blog 2025, Wilkinson et al. PNAS 2022 (pharma), CPCB India 2025. Exact order varies by methodology (chemical load vs. human impact vs. plastic volume).
 
 ---
 
