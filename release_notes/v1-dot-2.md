@@ -1,8 +1,8 @@
-feat: implement satellite imagery detection pipeline for riverine waste (issue #3)
+feat: implement satellite imagery detection pipeline for riverine waste ([issue #3](https://github.com/genidma/darya-genie/issues/3))
 
 Add a complete ML/CV detection pipeline for identifying pollution and waste
 in waterways using satellite imagery, aligning with the technical roadmap
-outlined in issue #3.
+outlined in [issue #3](https://github.com/genidma/darya-genie/issues/3).
 
 ## Contributor Workflow (1.a-c)
 
@@ -70,7 +70,7 @@ outlined in issue #3.
 
 ---
 
-## World's Most Polluted Rivers Research & Documentation (issue #1)
+## World's Most Polluted Rivers Research & Documentation ([issue #1](https://github.com/genidma/darya-genie/issues/1))
 
 ### Research & Catalog
 - Create docs/restoration/most_polluted_rivers.md with comprehensive
@@ -110,7 +110,7 @@ outlined in issue #3.
 
 ---
 
-## Consulting Ethics & README Integration (issue #17)
+## Consulting Ethics & README Integration ([issue #17](https://github.com/genidma/darya-genie/issues/17))
 
 - Document ethical framework: volunteer contributions ≠ consulting leverage
 - Add README update tasks linking research to permanent record:
@@ -121,7 +121,7 @@ outlined in issue #3.
 
 ---
 
-## Detection Pipeline Configs for Priority Rivers (issue #3 - extends (issue #3)
+## Detection Pipeline Configs for Priority Rivers (extends [issue #3](https://github.com/genidma/darya-genie/issues/3))
 
 ### Sentinel-2 Tile Coordinates
 | River | Tile | Resolution | Revisit |
