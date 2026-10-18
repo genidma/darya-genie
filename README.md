@@ -32,6 +32,7 @@ This repository is organized as follows:
 │   ├── safety/            # Darya Safety-First Certification Course (45-min curriculum)
 │   ├── restoration/
 │   │   └── gis_protocols.md         # Satellite-to-site suitability logic
+│   ├── CERTIFICATION_PROGRAMS.md    # Tiered certification tracks and career ladder
 │   ├── CURRICULUM.md      # Educational outreach materials
 │   ├── DRONE_PROTOCOLS.md # Drone-to-UGV coordination protocols
 │   └── SECURITY_AND_ASSET_PROTECTION.md # Asset protection and security policy
@@ -90,6 +91,12 @@ README.md → /docs/safety/ → /scripts/certification_gatekeeper.py → /src/ap
 3. **Payment Gateway Enforcement:** `/src/api/auth.py` middleware checks `User.is_certified == True` before processing any micro-incentive payout.
 
 For full curriculum details and certification requirements, see the [`/docs/safety/`](/docs/safety/) directory.
+
+### Certification Programs & Career Ladder
+
+Certification is a ladder, not a single gate. Beyond **Certified Collector**, community members can advance through **Field Technician**, **Aerial Operator**, **Restoration Lead**, and **Master Steward** tracks — each requiring system-verified evidence (documented shifts, flight hours, or drone-verified survival metrics) rather than tenure alone. Because the curriculum is version-controlled and payout enforcement lives in open-source code, a Darya certification is independently auditable and travels with the collector.
+
+For the full tier definitions, prerequisites, and benefits, see [Certification Programs](/docs/CERTIFICATION_PROGRAMS.md).
 
 ### Restoration Pipeline Integration
 The GIS protocols feed directly into the mangrove propagation workflow. Data is available via ESA (European Space Agency's) [Sentinel-2 Mission](https://browser.dataspace.copernicus.eu/?zoom=16&lat=24.879&lng=67.01395&themeId=DEFAULT-THEME&visualizationUrl=U2FsdGVkX1%2FEtIi0s5wgJf9hrUj6eo955RFHfzkjRinuZQfXnaEd77%2F097XT4GX2lCW3DsLLtBi05SG5P%2FZwlSRsTEKkKN48iTv5JvAf0bqrvGCpz0ysBMZmm9fUuXXK&datasetId=S2_L2A_CDAS). And private data is available via other satellite providers (not factored into the budget as of yet)
